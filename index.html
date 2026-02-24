@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlueLantern</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0a0f1f;
+    color:white;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#0d1328;
+    position:sticky;
+    top:0;
+}
+
+nav h1{
+    color:#4da6ff;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#4da6ff;
+}
+
+/* HERO */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#081229,#0f2c66);
+}
+
+.hero h2{
+    font-size:3rem;
+    color:#66b3ff;
+}
+
+.hero p{
+    margin:15px 0;
+    opacity:.8;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#1e90ff;
+    border:none;
+    color:white;
+    border-radius:25px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#63b3ff;
+}
+
+/* SECTION */
+section{
+    padding:60px 8%;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#111936;
+    padding:15px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 15px #1e90ff55;
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* ABOUT */
+.about{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+/* POSTS */
+.post{
+    background:#111936;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
+/* CONTACT */
+form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+input, textarea{
+    margin:10px 0;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0d1328;
+    margin-top:40px;
+}
+
+/* SCROLL EFFECT */
+html{
+    scroll-behavior:smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h1>BlueLantern</h1>
+<div>
+<a href="#home">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="#about">About</a>
+<a href="#posts">Posts</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<h2>Welcome to BlueLantern</h2>
+<p>Memes • Art • Graphics • Creativity Without Limits</p>
+<button class="btn" onclick="scrollToGallery()">Explore Gallery</button>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h2>Gallery</h2>
+<br>
+<div class="gallery">
+
+<div class="card">
+<img src="https://picsum.photos/400/300?1">
+<p>Meme Design</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?2">
+<p>Graphic Art</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?3">
+<p>Creative Poster</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?4">
+<p>Digital Artwork</p>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="about">
+<h2>About BlueLantern</h2>
+<br>
+<p>
+BlueLantern is a creative space where memes, art designs,
+and graphics come alive. Built to showcase creativity,
+humor, and digital expression in a modern visual experience.
+</p>
+</div>
+</section>
+
+<!-- POSTS -->
+<section id="posts">
+<h2>Latest Posts</h2>
+<br>
+
+<div class="post">
+<h3>New Meme Drop 🔥</h3>
+<p>Just uploaded a fresh meme design — creativity never sleeps.</p>
+</div>
+
+<div class="post">
+<h3>Graphic Design Update</h3>
+<p>Experimenting with blue neon aesthetics and futuristic layouts.</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Email" required>
+<textarea rows="5" placeholder="Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 BlueLantern — Creative Portfolio</p>
+</footer>
+
+<script>
+function scrollToGallery(){
+    document.getElementById("gallery").scrollIntoView();
+}
+</script>
+
+</body>
+</html>
